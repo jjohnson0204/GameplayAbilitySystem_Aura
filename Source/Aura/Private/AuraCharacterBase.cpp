@@ -3,6 +3,7 @@
 
 #include "AuraCharacterBase.h"
 
+
 // Sets default values
 AAuraCharacterBase::AAuraCharacterBase()
 {
