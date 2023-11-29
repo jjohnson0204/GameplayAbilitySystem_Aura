@@ -9,12 +9,35 @@
   <component name="ChangeListManager">
     <list default="true" id="c34ed755-768c-401d-891e-f3507d10d0e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Aura/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Aura/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Aura/Private/AuraCharacterBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Aura/Private/AuraCharacterBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/Crypto.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/InternationalizationExport.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/LocalizationServiceSettings.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/ObjectMixer.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/ObjectMixerSerializedData.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/TranslationPickerSettings.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/UnrealInsightsSettings.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/ReimportCache/3688439234.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/ShaderAutogen/PCD3D_ES3_1/AutogenShaderHeaders.ush" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/ShaderAutogen/PCD3D_SM5/AutogenShaderHeaders.ush" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/ShaderAutogen/PCD3D_SM6/AutogenShaderHeaders.ush" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/AutoScreenshot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/Aura.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/Aura.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Aura/Private/AuraCharacterBase.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Aura/Public/AuraCharacterBase.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/Aura/Private/Character/AuraCharacterBase.cpp" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectId" id="2YoYW9mImrNG6XBOKs6Fend6lYN" />
   <component name="ProjectViewState">
@@ -107,6 +130,10 @@
       <option name="presentableId" value="Default" />
       <updated>1701193433736</updated>
       <workItem from="1701195133573" duration="578000" />
+      <workItem from="1701217652820" duration="2872000" />
+      <workItem from="1701222255813" duration="222000" />
+      <workItem from="1701222783674" duration="1142000" />
+      <workItem from="1701224127682" duration="122000" />
     </task>
     <servers />
   </component>
