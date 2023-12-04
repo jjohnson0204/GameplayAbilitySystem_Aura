@@ -10,6 +10,14 @@ AAuraPlayerState::AAuraPlayerState()
 {
 	AbilitySystemComponent = CreateDefaultSubobject<UAuraAbilitySystemComponent>("AbilitySystemComponent");
 	AbilitySystemComponent->SetIsReplicated(true);
+	/**					For Mixed Replication Mode:
+	 * The OwnerActor's Owner must be the controller.
+	 * For Pawns, this is set automatically in PossessedBy().
+	 * The PlayerState's Owner is automatically set to the controller.
+	 * If the OwnerActor is not the PlayerState, and you use Mixed,
+	 *		you must call SetOwner() on the OwnerActor to set its owner to
+	 *		the Controller.
+	 */
 	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Mixed);
 
 	AttributeSet = CreateDefaultSubobject<UAuraAttributeSet>("AuraAttributeSet");
