@@ -21,11 +21,11 @@ void AAuraEffectActor::BeginPlay()
 }
 
 void AAuraEffectActor::ApplyEffectToTarget(
-	AActor* Target,
+	AActor* TargetActor,
 	TSubclassOf<UGameplayEffect> GameplayEffectClass)
 {
 	UAbilitySystemComponent* TargetAbilitySystemComponent =
-		UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(Target);
+		UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(TargetActor);
 	if (TargetAbilitySystemComponent == nullptr) return;
 
 	check(GameplayEffectClass);
@@ -40,7 +40,7 @@ void AAuraEffectActor::ApplyEffectToTarget(
 	/** Allows blueprints to generate a GameplayEffectSpec
 	 * once and then reference it by handle,
 	 * to apply it multiple times/multiple targets. */
-	FGameplayEffectSpecHandle EffectSpecHandle =
+	const FGameplayEffectSpecHandle EffectSpecHandle =
 		TargetAbilitySystemComponent->MakeOutgoingSpec(
 			GameplayEffectClass,
 			1.f,
