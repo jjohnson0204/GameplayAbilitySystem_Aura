@@ -43,7 +43,7 @@ void AAuraEffectActor::ApplyEffectToTarget(
 	const FGameplayEffectSpecHandle EffectSpecHandle =
 		TargetAbilitySystemComponent->MakeOutgoingSpec(
 			GameplayEffectClass,
-			1.f,
+			ActorLevel,
 			EffectContextHandle
 	);
 	const FActiveGameplayEffectHandle ActiveEffectHandle =
