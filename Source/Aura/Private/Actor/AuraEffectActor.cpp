@@ -30,9 +30,8 @@ void AAuraEffectActor::ApplyEffectToTarget(
 
 	check(GameplayEffectClass);
 	/**
-	 * ? Handle that wraps a FGameplayEffectContext or subclass,
-	 * ! to allow it to be polymorphic and replicate properly
-	 * @param 
+	 * Handle that wraps a FGameplayEffectContext or subclass,
+	 * to allow it to be polymorphic and replicate properly
 	 */
 	FGameplayEffectContextHandle EffectContextHandle =
 		TargetAbilitySystemComponent->MakeEffectContext();
