@@ -1,7 +1,7 @@
 // Copyright Light!!!!
 
 
-#include "AbilitySystem/AuraAbilitySytemLibrary.h"
+#include "AbilitySystem/AuraAbilitySystemLibrary.h"
 
 #include "AbilitySystemComponent.h"
 #include "Kismet/GameplayStatics.h"
@@ -9,7 +9,7 @@
 #include "Player/AuraPlayerState.h"
 #include "UI/HUD/AuraHUD.h"
 
-UOverlayWidgetController* UAuraAbilitySytemLibrary::GetOverlayWidgetController(const UObject* WorldContextObject)
+UOverlayWidgetController* UAuraAbilitySystemLibrary::GetOverlayWidgetController(const UObject* WorldContextObject)
 {
 	//Get the widget controller and return to the caller
 	//Call from within a widget

@@ -4,14 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "AuraAbilitySytemLibrary.generated.h"
+#include "AuraAbilitySystemLibrary.generated.h"
 
 class UOverlayWidgetController;
 /**
  * 
  */
 UCLASS()
-class AURA_API UAuraAbilitySytemLibrary : public UBlueprintFunctionLibrary
+class AURA_API UAuraAbilitySystemLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 
