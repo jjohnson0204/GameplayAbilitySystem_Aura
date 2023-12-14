@@ -68,6 +68,7 @@
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/UI/AttributeMenu/WBP_TextValueButton.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/UI/Button/WBP_WideButton.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/AbilitySystem/Data/DA_AttributeInfo.uasset",
+				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/UI/WidgetController/BP_AttributeMenuWidgetController.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/AbilitySystem/GamepalyEffects/PrimaryAttributes/GE_AuraPrimaryAttributes.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/Actor/Consumables/Potions/CT_PotionHeal.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/Actor/Consumables/GE_PotionHeal.uasset",
