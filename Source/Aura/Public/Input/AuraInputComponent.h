@@ -37,7 +37,7 @@ void UAuraInputComponent::BindAbilityActions(const UAuraInputConfig* InputConfig
 {
 	check(InputConfig);
 
-	for (const FAuraInputAction& Action : InputConfig)
+	for (const FAuraInputAction& Action : InputConfig->AbilityInputActions)
 	{
 		if (Action.InputAction && Action.InputTag.IsValid())
 		{
