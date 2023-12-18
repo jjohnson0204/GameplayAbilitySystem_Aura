@@ -80,6 +80,8 @@
 				"D:/Unreal Projects/5.21/Aura/Content/Assets/Dungeon/Beacon/SM_Beacon.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/AbilitySystem/GameplayAbilities/Fire/FireBolt/BP_FireBolt.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/AbilitySystem/GameplayAbilities/Fire/FireBolt/GA_FireBolt.uasset",
+				"D:/Unreal Projects/5.21/Aura/Content/Assets/Characters/Aura/Animations/Abilities/AM_Cast_FireBolt.uasset",
+				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/AnimNotifies/AN_MontageEvent.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/UI/AttributeMenu/WBP_TextValueButton.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/AbilitySystem/GamepalyEffects/PrimaryAttributes/GE_AuraPrimaryAttributes.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/Actor/Consumables/Potions/CT_PotionHeal.uasset",
