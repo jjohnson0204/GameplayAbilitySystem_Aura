@@ -157,25 +157,32 @@ void UAuraAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallba
 
 	if (Data.EvaluatedData.Attribute == GetHealthAttribute())
 	{
+		//Legit Set of Health
+		SetHealth(FMath::Clamp(GetHealth(), 0.f, GetMaxHealth()));
+
 		GEngine->AddOnScreenDebugMessage(
 			1,
 			3.f,
 			FColor::Red,
-			FString::Printf(TEXT("Health: %f"), GetHealth())
+			FString::Printf(TEXT(
+				"Changed Health on %s, Health: %f"),
+				*Props.TargetAvatarActor->GetName(),
+				GetHealth()
+			)
 		);
-		//Legit Set of Health
-		SetHealth(FMath::Clamp(GetHealth(), 0.f, GetMaxHealth()));
+		
 	}
 	if (Data.EvaluatedData.Attribute == GetManaAttribute())
 	{
-		GEngine->AddOnScreenDebugMessage(
-			1,
-			3.f,
-			FColor::Blue,
-			FString::Printf(TEXT("Mana: %f"), GetHealth())
-		);
 		//Legit Set of Mana
 		SetMana(FMath::Clamp(GetMana(), 0.f, GetMaxMana()));
+
+		GEngine->AddOnScreenDebugMessage(
+	        1,
+	        3.f,
+	        FColor::Blue,
+	        FString::Printf(TEXT("Mana: %f"), GetHealth())
+        );
 	}
 }
 
