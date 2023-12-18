@@ -63,6 +63,7 @@ void UTargetDataUnderMouse::SendMouseCursorData()
 	
 }
 
+//Data to be sent back
 void UTargetDataUnderMouse::OnTargetDataReplicatedCallback(
 	const FGameplayAbilityTargetDataHandle& DataHandle,
 	FGameplayTag ActivationTag)

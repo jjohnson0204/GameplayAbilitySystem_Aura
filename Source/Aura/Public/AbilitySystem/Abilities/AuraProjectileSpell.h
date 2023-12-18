@@ -24,8 +24,9 @@ protected:
 		const FGameplayEventData* TriggerEventData
 	)override;
 
+	//With location of mouse cursor
 	UFUNCTION(BlueprintCallable, Category= "Projectile")
-	void SpawnProjectile();
+	void SpawnProjectile(const FVector& ProjectileTargetLocation);
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TSubclassOf<AAuraProjectile> ProjectileClass;
