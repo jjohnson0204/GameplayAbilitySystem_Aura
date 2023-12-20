@@ -40,6 +40,7 @@ public:
 	//Movement
 	UPROPERTY(BlueprintReadOnly, Category= "Enemy Movement")
 	float BaseWalkSpeed = 300.f;
+	
 
 	//Effects
 	void HitReactTagChanged(const FGameplayTag CallbackTag, int32 NewCount);
@@ -47,7 +48,11 @@ public:
 	//Combat
 	UPROPERTY(BlueprintReadOnly, Category= "Combat")
 	bool bHitReacting = false;
-
+	
+	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category= "Combat")
+	float LifeSpan = 5.f;
+	
+	virtual void Die() override;
 	
 protected:
 	virtual void BeginPlay() override;
