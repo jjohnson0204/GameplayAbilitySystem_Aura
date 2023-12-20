@@ -32,4 +32,10 @@ public:
 		float Level,
 		UAbilitySystemComponent* ASC
 	);
+
+	UFUNCTION()
+	static void GiveStartupAbilities(
+		const UObject* WorldContextObject,
+		UAbilitySystemComponent* ASC
+	);
 };
