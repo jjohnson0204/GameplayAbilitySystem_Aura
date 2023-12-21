@@ -101,6 +101,8 @@
 				"D:/Unreal Projects/5.21/Aura/Content/Assets/Enemies/Goblin/Animations/Slingshot/AM_HitReact_Slingshot.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Assets/Enemies/Goblin/Spear/Materials/MI_Spear_Dissolve.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Assets/Enemies/Goblin/Slingshot/Materials/Red/MI_Slingshot_Red_Dissolve.uasset",
+				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/UI/FloatingText/WBP_DamageText.uasset",
+				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/UI/FloatingText/BP_DamageTextComponent.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/AbilitySystem/GamepalyEffects/DefaultAttributes/GE_AuraPrimaryAttributes.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/AbilitySystem/GamepalyEffects/DefaultAttributes/GE_AuraSecondayAttributes.uasset",
 				"D:/Unreal Projects/5.21/Aura/Content/Blueprints/AbilitySystem/GamepalyEffects/DefaultAttributes/GE_AuraVitalAttributes.uasset",
