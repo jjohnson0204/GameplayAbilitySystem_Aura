@@ -1254,3 +1254,62 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2023.12.21-09.48.49:174][284]PIE: Server logged in
 [2023.12.21-09.48.49:176][284]PIE: Play in editor total start time 0.14 seconds.
 [2023.12.21-09.48.49:224][284]LogViewport: Scene viewport resized to 1914x980, mode Windowed.
+[2023.12.21-09.53.31:637][517]LogAudioMixer: Warning: AudioMixerPlatformInterface Timeout [270920ms] waiting for h/w. InstanceID=2
+[2023.12.21-09.53.31:637][517]LogTemp: Warning: Health: 107.820656
+[2023.12.21-09.53.31:637][517]LogAudioMixer: Warning: AudioMixerPlatformInterface Timeout [270921ms] waiting for h/w. InstanceID=1
+[2023.12.21-09.53.31:642][517]LogAudioMixer: Display: FMixerNullCallback: Simulating a h/w device callback at [21ms], ThreadID=3044
+[2023.12.21-09.53.31:643][517]LogAudioMixer: Display: FMixerNullCallback: Simulating a h/w device callback at [21ms], ThreadID=17556
+[2023.12.21-09.53.31:694][518]LogShaderCompilers: Display: ================================================
+[2023.12.21-09.53.31:694][518]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2023.12.21-09.53.31:694][518]LogShaderCompilers: Display: Total job queries 117, among them cache hits 26 (22.22%)
+[2023.12.21-09.53.31:694][518]LogShaderCompilers: Display: Tracking 91 distinct input hashes that result in 58 distinct outputs (63.74%)
+[2023.12.21-09.53.31:694][518]LogShaderCompilers: Display: RAM used: 2.21 MiB of 1.60 GiB budget. Usage: 0.14%
+[2023.12.21-09.53.31:694][518]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2023.12.21-09.53.31:694][518]LogShaderCompilers: Display: Shaders Compiled: 0
+[2023.12.21-09.53.31:695][518]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0.00%)
+[2023.12.21-09.53.31:695][518]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2023.12.21-09.53.31:695][518]LogShaderCompilers: Display: ================================================
+[2023.12.21-09.53.31:997][519]LogAudioMixer: Display: Successful Swap new Device is (NumChannels=2, SampleRate=48000, DeviceID={0.0.0.00000000}.{0e88d65a-5720-4357-a650-da4eebcb0a6c}, Name=Headphones (2- Jaye Office speaker)), Reason=AudioMixerPlatformInterface. Timeout waiting for h/w., InstanceID=1, DurationMS=50.99
+[2023.12.21-09.53.31:997][519]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=1
+[2023.12.21-09.53.32:000][519]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=1
+[2023.12.21-09.53.32:003][519]LogAudioMixer: Display: Successful Swap new Device is (NumChannels=2, SampleRate=48000, DeviceID={0.0.0.00000000}.{0e88d65a-5720-4357-a650-da4eebcb0a6c}, Name=Headphones (2- Jaye Office speaker)), Reason=AudioMixerPlatformInterface. Timeout waiting for h/w., InstanceID=2, DurationMS=49.99
+[2023.12.21-09.53.32:003][519]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=2
+[2023.12.21-09.53.32:006][519]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=2
+[2023.12.21-09.53.38:270][672]LogTemp: Warning: Health: 98.141312
+[2023.12.21-09.53.39:608][748]LogTemp: Warning: Health: 88.461967
+[2023.12.21-09.53.40:707][811]LogTemp: Warning: Health: 78.782623
+[2023.12.21-09.53.41:838][875]LogTemp: Warning: Health: 69.103279
+[2023.12.21-09.53.42:838][932]LogTemp: Warning: Health: 59.423935
+[2023.12.21-09.53.43:880][990]LogTemp: Warning: Health: 49.744591
+[2023.12.21-09.53.44:849][ 41]LogTemp: Warning: Health: 40.065247
+[2023.12.21-09.53.45:932][ 99]LogTemp: Warning: Health: 30.385904
+[2023.12.21-09.53.47:005][156]LogTemp: Warning: Health: 20.706562
+[2023.12.21-09.53.48:098][211]LogTemp: Warning: Health: 11.027220
+[2023.12.21-09.53.48:931][254]LogDerivedDataCache: C:/Users/joejo/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:17.295 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 9476 files in 11862 folders with total size 2658 MiB.
+[2023.12.21-09.53.49:199][267]LogTemp: Warning: Health: 0.000000
+[2023.12.21-09.53.54:924][537]LogTemp: Warning: Health: 107.837097
+[2023.12.21-09.53.56:396][598]LogTemp: Warning: Health: 98.174194
+[2023.12.21-09.54.00:210][753]LogTemp: Warning: Health: 88.511292
+[2023.12.21-09.54.01:392][801]LogTemp: Warning: Health: 78.848389
+[2023.12.21-09.54.02:528][847]LogTemp: Warning: Health: 69.185486
+[2023.12.21-09.54.03:549][884]LogTemp: Warning: Health: 59.522587
+[2023.12.21-09.54.04:495][916]LogTemp: Warning: Health: 49.859688
+[2023.12.21-09.54.05:608][954]LogTemp: Warning: Health: 40.196789
+[2023.12.21-09.54.06:764][993]LogTemp: Warning: Health: 30.533890
+[2023.12.21-09.54.07:690][ 25]LogTemp: Warning: Health: 20.870991
+[2023.12.21-09.54.08:874][ 65]LogTemp: Warning: Health: 11.208092
+[2023.12.21-09.54.09:994][103]LogTemp: Warning: Health: 1.545193
+[2023.12.21-09.54.11:258][146]LogTemp: Warning: Health: 0.000000
+[2023.12.21-09.54.15:907][241]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.21-09.54.15:907][241]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_StartupMap
+[2023.12.21-09.54.15:910][241]LogSlate: Window 'Aura Preview [NetMode: Standalone 0]  (64-bit/D3D Shader Model 6)' being destroyed
+[2023.12.21-09.54.16:124][241]LogWorld: UWorld::CleanupWorld for StartupMap, bSessionEnded=true, bCleanupResources=true
+[2023.12.21-09.54.16:126][241]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.21-09.54.16:129][241]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.21-09.54.16:134][241]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.21-09.54.16:151][241]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.12.21-09.54.16:151][241]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 2
+[2023.12.21-09.54.16:152][241]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2023.12.21-09.54.16:154][241]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2023.12.21-09.54.16:164][241]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2023.12.21-09.54.16:226][242]LogPlayLevel: Display: Destroying online subsystem :Context_1
