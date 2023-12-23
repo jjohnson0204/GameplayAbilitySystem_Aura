@@ -50,6 +50,9 @@ public:
 
 	// Damage Tags
 	FGameplayTag Damage;
+	FGameplayTag Damage_Fire;
+
+	TArray<FGameplayTag> DamageTypes;
 
 	//Effect Tags
 	FGameplayTag Effects_HitReact;
