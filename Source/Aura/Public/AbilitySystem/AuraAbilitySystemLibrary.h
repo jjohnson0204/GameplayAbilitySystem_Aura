@@ -9,6 +9,7 @@
 
 class UAbilitySystemComponent;
 class UOverlayWidgetController;
+class UOverlayWidgetController;
 /**
  * 
  */
