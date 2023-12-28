@@ -13,106 +13,61 @@
 
 UOverlayWidgetController* UAuraAbilitySystemLibrary::GetOverlayWidgetController(const UObject* WorldContextObject)
 {
-	//Get the widget controller and return to the caller
-	//Call from within a widget
-	//Get player controller
 	if (APlayerController* PC = UGameplayStatics::GetPlayerController(WorldContextObject, 0))
 	{
-		//Get the Hud
 		if (AAuraHUD* AuraHUD = Cast<AAuraHUD>(PC->GetHUD()))
 		{
-			//Access Player State
 			AAuraPlayerState* PS = PC->GetPlayerState<AAuraPlayerState>();
-			//Access Ability System Component
 			UAbilitySystemComponent* ASC = PS->GetAbilitySystemComponent();
-			// Access Attribute Set
 			UAttributeSet* AS = PS->GetAttributeSet();
-			/**
-			 * With the PC, PS, ASC and AS you have the Parms for FWidgetControllerParams
-			 */
 			const FWidgetControllerParams WidgetControllerParams(PC, PS, ASC, AS);
-			//return controller
 			return AuraHUD->GetOverlayWidgetController(WidgetControllerParams);
 		}
 	}
 	return nullptr;
 }
 
-UAttributeMenuWidgetController* UAuraAbilitySystemLibrary::GetAttributeMenuWidgetController(const UObject* WorldContextObject)
+UAttributeMenuWidgetController* UAuraAbilitySystemLibrary::GetAttributeMenuWidgetController(
+	const UObject* WorldContextObject)
 {
 	if (APlayerController* PC = UGameplayStatics::GetPlayerController(WorldContextObject, 0))
 	{
-		//Get the Hud
 		if (AAuraHUD* AuraHUD = Cast<AAuraHUD>(PC->GetHUD()))
 		{
-			//Access Player State
 			AAuraPlayerState* PS = PC->GetPlayerState<AAuraPlayerState>();
-			//Access Ability System Component
 			UAbilitySystemComponent* ASC = PS->GetAbilitySystemComponent();
-			// Access Attribute Set
 			UAttributeSet* AS = PS->GetAttributeSet();
-			/**
-			 * With the PC, PS, ASC and AS you have the Parms for FWidgetControllerParams
-			 */
 			const FWidgetControllerParams WidgetControllerParams(PC, PS, ASC, AS);
-			//return controller
 			return AuraHUD->GetAttributeMenuWidgetController(WidgetControllerParams);
 		}
 	}
 	return nullptr;
 }
 
-void UAuraAbilitySystemLibrary::InitializeDefaultAttributes(
-	const UObject* WorldContextObject,
-	ECharacterClass CharacterClass,
-	float Level,
-	UAbilitySystemComponent* ASC)
+void UAuraAbilitySystemLibrary::InitializeDefaultAttributes(const UObject* WorldContextObject, ECharacterClass CharacterClass, float Level, UAbilitySystemComponent* ASC)
 {
-	const AAuraGameModeBase* AuraGameMode = Cast<AAuraGameModeBase>(
-		UGameplayStatics::GetGameMode(WorldContextObject)
-	);
-	if (AuraGameMode == nullptr) return;
-
 	AActor* AvatarActor = ASC->GetAvatarActor();
-	
-	UCharacterClassInfo* CharacterClassInfo = GetCharacterClassInfo(WorldContextObject);
-	const FCharacterClassDefaultInfo ClassDefaultInfo = CharacterClassInfo->GetClassDefaultInfo(CharacterClass);
 
-	//Primary
-	FGameplayEffectContextHandle PrimaryAttributesContextHandle	= ASC->MakeEffectContext();
+	UCharacterClassInfo* CharacterClassInfo = GetCharacterClassInfo(WorldContextObject);
+	FCharacterClassDefaultInfo ClassDefaultInfo = CharacterClassInfo->GetClassDefaultInfo(CharacterClass);
+
+	FGameplayEffectContextHandle PrimaryAttributesContextHandle = ASC->MakeEffectContext();
 	PrimaryAttributesContextHandle.AddSourceObject(AvatarActor);
-	const FGameplayEffectSpecHandle PrimaryAttributesSpecHandle = ASC->MakeOutgoingSpec(
-		ClassDefaultInfo.PrimaryAttributes,
-		Level,
-		PrimaryAttributesContextHandle
-	);
+	const FGameplayEffectSpecHandle PrimaryAttributesSpecHandle = ASC->MakeOutgoingSpec(ClassDefaultInfo.PrimaryAttributes, Level, PrimaryAttributesContextHandle);
 	ASC->ApplyGameplayEffectSpecToSelf(*PrimaryAttributesSpecHandle.Data.Get());
 
-	//Secondary
-	FGameplayEffectContextHandle SecondaryAttributesContextHandle	= ASC->MakeEffectContext();
+	FGameplayEffectContextHandle SecondaryAttributesContextHandle = ASC->MakeEffectContext();
 	SecondaryAttributesContextHandle.AddSourceObject(AvatarActor);
-	const FGameplayEffectSpecHandle SecondaryAttributesSpecHandle = ASC->MakeOutgoingSpec(
-		CharacterClassInfo->SecondaryAttributes,
-		Level,
-		SecondaryAttributesContextHandle
-	);
+	const FGameplayEffectSpecHandle SecondaryAttributesSpecHandle = ASC->MakeOutgoingSpec(CharacterClassInfo->SecondaryAttributes, Level, SecondaryAttributesContextHandle);
 	ASC->ApplyGameplayEffectSpecToSelf(*SecondaryAttributesSpecHandle.Data.Get());
 
-	//Vital
-	FGameplayEffectContextHandle VitalAttributesContextHandle	= ASC->MakeEffectContext();
+	FGameplayEffectContextHandle VitalAttributesContextHandle = ASC->MakeEffectContext();
 	VitalAttributesContextHandle.AddSourceObject(AvatarActor);
-	const FGameplayEffectSpecHandle VitalAttributesSpecHandle = ASC->MakeOutgoingSpec(
-		CharacterClassInfo->VitalAttributes,
-		Level,
-		VitalAttributesContextHandle
-	);
+	const FGameplayEffectSpecHandle VitalAttributesSpecHandle = ASC->MakeOutgoingSpec(CharacterClassInfo->VitalAttributes, Level, VitalAttributesContextHandle);
 	ASC->ApplyGameplayEffectSpecToSelf(*VitalAttributesSpecHandle.Data.Get());
 }
 
-void UAuraAbilitySystemLibrary::GiveStartupAbilities(
-	const UObject* WorldContextObject,
-	UAbilitySystemComponent* ASC,
-	ECharacterClass CharacterClass)
+void UAuraAbilitySystemLibrary::GiveStartupAbilities(const UObject* WorldContextObject, UAbilitySystemComponent* ASC, ECharacterClass CharacterClass)
 {
 	UCharacterClassInfo* CharacterClassInfo = GetCharacterClassInfo(WorldContextObject);
 	if (CharacterClassInfo == nullptr) return;
@@ -126,10 +81,7 @@ void UAuraAbilitySystemLibrary::GiveStartupAbilities(
 	{
 		if (ICombatInterface* CombatInterface = Cast<ICombatInterface>(ASC->GetAvatarActor()))
 		{
-			FGameplayAbilitySpec AbilitySpec = FGameplayAbilitySpec(
-				AbilityClass,
-				CombatInterface->GetPlayerLevel()
-			);
+			FGameplayAbilitySpec AbilitySpec = FGameplayAbilitySpec(AbilityClass, CombatInterface->GetPlayerLevel());
 			ASC->GiveAbility(AbilitySpec);
 		}
 	}
@@ -137,9 +89,7 @@ void UAuraAbilitySystemLibrary::GiveStartupAbilities(
 
 UCharacterClassInfo* UAuraAbilitySystemLibrary::GetCharacterClassInfo(const UObject* WorldContextObject)
 {
-	AAuraGameModeBase* AuraGameMode = Cast<AAuraGameModeBase>(
-		UGameplayStatics::GetGameMode(WorldContextObject)
-	);
+	AAuraGameModeBase* AuraGameMode = Cast<AAuraGameModeBase>(UGameplayStatics::GetGameMode(WorldContextObject));
 	if (AuraGameMode == nullptr) return nullptr;
 	return AuraGameMode->CharacterClassInfo;
 }
@@ -185,32 +135,25 @@ void UAuraAbilitySystemLibrary::GetLivePlayersWithinRadius(const UObject* WorldC
 {
 	FCollisionQueryParams SphereParams;
 	SphereParams.AddIgnoredActors(ActorsToIgnore);
-
-	TArray<FOverlapResult> Overlaps;
-	if (const UWorld* World = GEngine->GetWorldFromContextObject(
-		WorldContextObject,
-		EGetWorldErrorMode::LogAndReturnNull))
+	
+	if (const UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull))
 	{
-		World->OverlapMultiByObjectType(
-			Overlaps,
-			SphereOrigin,
-			FQuat::Identity,
-			FCollisionObjectQueryParams(FCollisionObjectQueryParams::InitType::AllDynamicObjects),
-			FCollisionShape::MakeSphere(Radius),
-			SphereParams
-		);
+		TArray<FOverlapResult> Overlaps;
+		World->OverlapMultiByObjectType(Overlaps, SphereOrigin, FQuat::Identity, FCollisionObjectQueryParams(FCollisionObjectQueryParams::InitType::AllDynamicObjects), FCollisionShape::MakeSphere(Radius), SphereParams);
 		for (FOverlapResult& Overlap : Overlaps)
 		{
-			
-			if (Overlap.GetActor()->Implements<UCombatInterface>()
-				&& !ICombatInterface::Execute_IsDead(Overlap.GetActor()))
+			if (Overlap.GetActor()->Implements<UCombatInterface>() && !ICombatInterface::Execute_IsDead(Overlap.GetActor()))
 			{
-				OutOverlappingActors.AddUnique(
-					ICombatInterface::Execute_GetAvatar(
-							Overlap.GetActor()
-					)
-				);
+				OutOverlappingActors.AddUnique(ICombatInterface::Execute_GetAvatar(Overlap.GetActor()));
 			}
 		}
 	}
+}
+
+bool UAuraAbilitySystemLibrary::IsNotFriend(AActor* FirstActor, AActor* SecondActor)
+{
+	const bool bBothArePlayers = FirstActor->ActorHasTag(FName("Player")) && SecondActor->ActorHasTag(FName("Player"));
+	const bool bBothAreEnemies = FirstActor->ActorHasTag(FName("Enemy")) && SecondActor->ActorHasTag(FName("Enemy"));
+	const bool bFriends = bBothArePlayers || bBothAreEnemies;
+	return !bFriends;
 }
